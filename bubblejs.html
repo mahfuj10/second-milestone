@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+#first-div{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(172, 66, 66);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#second-div{
+    width: 300px;
+    height: 200px;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#third-div{
+    width: 150px;
+    height: 100px;
+    background-color: blueviolet;
+
+    
+}
+
+</style>
+<body>
+    
+
+<div id="first-div">
+
+<div id="second-div">
+
+<div id="third-div"></div>
+
+</div>
+
+</div>
+
+
+
+
+
+<script>
+
+const firstDiv = document.getElementById('first-div');
+firstDiv.addEventListener('click', function(){
+    console.log('first div click');
+})
+
+const sconddiv = document.getElementById('second-div');
+sconddiv.addEventListener('click', function(event){
+    console.log('second div click');
+    event.stopPropagation();
+})
+
+const thirddiv = document.getElementById('third-div');
+thirddiv.addEventListener('click', function(event){
+    console.log('third div click');
+    event.stopPropagation();
+    
+})
+
+
+</script>
+
+
+
+
+</body>
+</html>
